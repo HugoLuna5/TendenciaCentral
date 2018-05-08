@@ -2,6 +2,8 @@ package tendenciacentral;
 
 import tendenciacentral.interfaces.*;
 
+import javax.swing.*;
+
 public class TC implements desviacion, media, mediana, moda, rangoMedio, varianza {
 
     /**
@@ -120,6 +122,10 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
 
         desviacion = Math.sqrt(varianza);
 
+
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Desviación: "+desviacion, "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
+
+
     }
 
     @Override
@@ -148,6 +154,8 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
         varianza = varianza / data;//suma de diferencias sobre "n"
 
         desviacion = Math.sqrt(varianza);
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Desviación: "+desviacion, "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
+
 
     }
 
@@ -167,6 +175,9 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
 
         x = sum / data;
 
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Media: "+x, "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
+
+
     }
 
     @Override
@@ -182,6 +193,8 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
         }
 
         x = sum / data;
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Media: "+x, "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
+
     }
 
 
@@ -214,6 +227,10 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
 
         varianza = varianza / 10f;//suma de diferencias sobre "n"
 
+
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Varianza: "+varianza, "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
+
+
     }
 
     @Override
@@ -244,6 +261,9 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
 
         varianza = varianza / 10f;//suma de diferencias sobre "n"
 
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Varianza: "+varianza, "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
+
+
     }
 
     @Override
@@ -264,6 +284,9 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
 
             mediana = data / 2;
         }
+
+
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Mediana: "+mediana, "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
 
 
 
@@ -290,7 +313,9 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
             }
         }
 
-        System.out.println("La moda es "+moda+" y se repitió "+maximaVecesQueSeRepite+" veces.");
+
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "La moda es "+moda+" y se repitió "+maximaVecesQueSeRepite+" veces.", "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
+
 
     }
 
@@ -315,12 +340,16 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
             }
         }
 
-        System.out.println("La moda es "+moda+" y se repitió "+maximaVecesQueSeRepite+" veces.");
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "La moda es "+moda+" y se repitió "+maximaVecesQueSeRepite+" veces.", "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
 
     }
 
     @Override
     public void rango(int maximo, int minimo) {
         double rm = (maximo + minimo) / 2;
+
+
+        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Rango: "+rm, "Resultado de las operaciones", JOptionPane.DEFAULT_OPTION);
+
     }
 }

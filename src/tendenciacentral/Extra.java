@@ -80,7 +80,7 @@ public class Extra  {
                  */
 
                     TC tcDouble = new TC();
-                    tcDouble.setTipoDeDato("Entero");
+                    tcDouble.setTipoDeDato("Real");
                     tcDouble.setRangoP(Integer.parseInt(rangoP()));
                     tcDouble.setRangoQ(Integer.parseInt(rangoQ()));
 
