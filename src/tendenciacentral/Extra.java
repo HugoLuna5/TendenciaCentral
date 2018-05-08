@@ -1,8 +1,6 @@
 package tendenciacentral;
 
-import tendenciacentral.interfaces.media;
-import tendenciacentral.interfaces.mediana;
-import tendenciacentral.interfaces.rangoMedio;
+import tendenciacentral.interfaces.*;
 
 import javax.swing.*;
 import java.util.Random;
@@ -69,7 +67,10 @@ public class Extra  {
 
                     media(tcEntero,Arreglo,Integer.parseInt(dat));
                     mediana(tcEntero,Integer.parseInt(dat));
+                    moda(tcEntero,Arreglo);
                     rangoMedio(tcEntero,pVar,qVar);
+                    varianza(tcEntero,Arreglo,Integer.parseInt(dat));
+                    desviacion(tcEntero,Arreglo,Integer.parseInt(dat));
 
                     break;
                 case "Real":
@@ -116,6 +117,9 @@ public class Extra  {
                     media(tcDouble,ArregloDou,Integer.parseInt(datDou));
                     mediana(tcDouble,Integer.parseInt(datDou));
                     rangoMedio(tcDouble,pVarDou,qVarDou);
+                    moda(tcDouble,ArregloDou);
+                    varianza(tcDouble,ArregloDou,Integer.parseInt(datDou));
+                    desviacion(tcDouble,ArregloDou,Integer.parseInt(datDou));
 
                     break;
 
@@ -189,9 +193,36 @@ public class Extra  {
         med.mediana(data);
     }
 
+    public static void moda(moda moda, int arr[]){
+        moda.moda(arr);
+    }
+    public static void moda(moda moda, double arr[]){
+        moda.moda(arr);
+    }
+
 
     public static void rangoMedio(rangoMedio rango, int maximo, int minimo ){
         rango.rango(maximo, minimo);
+
+    }
+
+
+    public static void varianza(varianza varianza,double[] arre, int data){
+        varianza.varianza(arre,data);
+    }
+
+    public static void varianza(varianza varianza,int[] arre, int data){
+        varianza.varianza(arre,data);
+    }
+
+
+    public static void desviacion(desviacion desviacion, double[] arre, int data){
+        desviacion.desviacion(arre,data);
+
+    }
+
+    public static void desviacion(desviacion desviacion, int[] arre, int data){
+        desviacion.desviacion(arre,data);
 
     }
 
