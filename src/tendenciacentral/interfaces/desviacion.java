@@ -5,5 +5,6 @@ package tendenciacentral.interfaces;
  */
 
 public interface desviacion {
-    void desviacion();
+    void desviacion(double[] arre, int data);
+    void desviacion(int[] arre, int data);
 }

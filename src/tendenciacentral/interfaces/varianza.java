@@ -5,5 +5,6 @@ package tendenciacentral.interfaces;
  */
 
 public interface varianza {
-    void varianza();
+    void varianza(double[] arre, int data);
+    void varianza(int[] arre, int data);
 }

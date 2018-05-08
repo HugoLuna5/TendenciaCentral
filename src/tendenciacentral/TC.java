@@ -94,7 +94,60 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
     }
 
     @Override
-    public void desviacion() {
+    public void desviacion(double[] arre, int data) {
+        float media = 0;
+        double varianza = 0.0;
+        double desviacion= 0.0;
+        double sumatoria = 0.0;
+
+        for (int i = 0; i < data; i++ ){
+
+
+
+            sumatoria = sumatoria + arre[i];
+
+        }
+
+        media = (float) (sumatoria / data);
+
+        for(int i = 0 ; i < data; i++){
+            double rango;
+            rango = Math.pow(arre[i] - media, 2f);
+            varianza = varianza + rango;
+        }
+
+        varianza = varianza / data;//suma de diferencias sobre "n"
+
+        desviacion = Math.sqrt(varianza);
+
+    }
+
+    @Override
+    public void desviacion(int[] arre, int data) {
+        float media = 0;
+        double varianza = 0.0;
+        double desviacion= 0.0;
+        double sumatoria = 0.0;
+
+        for (int i = 0; i < data; i++ ){
+
+
+
+            sumatoria = sumatoria + arre[i];
+
+        }
+
+        media = (float) (sumatoria / data);
+
+        for(int i = 0 ; i < data; i++){
+            double rango;
+            rango = Math.pow(arre[i] - media, 2f);
+            varianza = varianza + rango;
+        }
+
+        varianza = varianza / data;//suma de diferencias sobre "n"
+
+        desviacion = Math.sqrt(varianza);
 
     }
 
@@ -134,7 +187,62 @@ public class TC implements desviacion, media, mediana, moda, rangoMedio, varianz
 
 
     @Override
-    public void varianza() {
+    public void varianza(double[] arre, int data) {
+
+
+        float media = 0;
+        double varianza = 0.0;
+        double desviacion= 0.0;
+        double sumatoria = 0.0;
+
+        for (int i = 0; i < data; i++ ){
+
+
+
+            sumatoria = sumatoria + arre[i];
+
+        }
+
+        media = (float) (sumatoria / data);
+
+
+        for(int i = 0 ; i < data; i++){
+            double rango;
+            rango = Math.pow(arre[i] - media, 2f);
+            varianza = varianza + rango;
+        }
+
+        varianza = varianza / 10f;//suma de diferencias sobre "n"
+
+    }
+
+    @Override
+    public void varianza(int[] arre, int data) {
+
+
+        float media = 0;
+        double varianza = 0.0;
+        double desviacion= 0.0;
+        double sumatoria = 0.0;
+
+        for (int i = 0; i < data; i++ ){
+
+
+
+            sumatoria = sumatoria + arre[i];
+
+        }
+
+        media = (float) (sumatoria / data);
+
+
+        for(int i = 0 ; i < data; i++){
+            double rango;
+            rango = Math.pow(arre[i] - media, 2f);
+            varianza = varianza + rango;
+        }
+
+        varianza = varianza / 10f;//suma de diferencias sobre "n"
 
     }
 
